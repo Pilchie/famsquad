@@ -6,6 +6,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using System.Linq;
+using System.Text;
+using Microsoft.AspNetCore.Http;
 
 namespace famsquad.Server
 {
@@ -49,6 +51,9 @@ namespace famsquad.Server
 
             app.UseEndpoints(endpoints =>
             {
+                endpoints.MapGet(
+                    ".well-known/acme-challenge/-ao1ljtJmmImbk-F8UqCgrXbxlyu_h5rKvu-N7rl9eI",
+                    async context => await context.Response.Body.WriteAsync(Encoding.UTF8.GetBytes("-ao1ljtJmmImbk-F8UqCgrXbxlyu_h5rKvu-N7rl9eI.drcSSYPqZiqcDXBEI5L2bf5NvbCKBm6gdl75_wpsmFs")));
                 endpoints.MapControllers();
                 endpoints.MapFallbackToFile("index.html");
             });
