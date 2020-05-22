@@ -52,8 +52,8 @@ namespace famsquad.Server
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapGet(
-                    ".well-known/acme-challenge/-ao1ljtJmmImbk-F8UqCgrXbxlyu_h5rKvu-N7rl9eI",
-                    async context => await context.Response.Body.WriteAsync(Encoding.UTF8.GetBytes("-ao1ljtJmmImbk-F8UqCgrXbxlyu_h5rKvu-N7rl9eI.drcSSYPqZiqcDXBEI5L2bf5NvbCKBm6gdl75_wpsmFs")));
+                    ".well-known/acme-challenge/oZaBcfyqti12jluyKywAI0TugAs5X8eL1uwuKiu7PfQ",
+                    async context => await context.Response.Body.WriteAsync(Encoding.UTF8.GetBytes("oZaBcfyqti12jluyKywAI0TugAs5X8eL1uwuKiu7PfQ.zIzlZ787nfLIpKva7DoQkpDjHE2aEoE21QoqFagWL2c")));
                 endpoints.MapControllers();
                 endpoints.MapFallbackToFile("index.html");
             });
